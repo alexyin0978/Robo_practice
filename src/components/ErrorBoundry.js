@@ -13,14 +13,8 @@ class ErrorBoundry extends Component{
     }
 
     render(){
-        if(this.state.hasError){
-            return <h1>Ooooops, something went wrong!!</h1>
-        }
-        return this.props.children
-        
-        
-        // !this.state.hasError ? <h1>Ooooops, something went wrong!!</h1> :
-        // this.props.children
+        return this.state.hasError ? <h1>Ooooops, something went wrong!!</h1> :
+        this.props.children
     }
 }
 
